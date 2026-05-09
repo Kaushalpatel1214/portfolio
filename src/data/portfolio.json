@@ -1,0 +1,127 @@
+{
+  "personalInfo": {
+    "name": "Kaushal Patel",
+    "role": "Frontend Developer & UI Engineer",
+    "location": "India",
+    "email": "kn.patel1214@gmail.com",
+    "github": "https://github.com/KaushalPatel14",
+    "linkedin": "https://www.linkedin.com/in/kaushal-patel-376958398/",
+    "twitter": "https://twitter.com/alexrivira",
+    "bio": "Frontend developer with 3+ years of experience building high-performance, visually stunning web experiences. I specialize in React, Next.js, and modern UI engineering — turning ideas into fast, beautiful, production-ready interfaces.",
+    "resume": "/resume.pdf"
+  },
+  "stats": [
+    {
+      "label": "Years Experience",
+      "value": "3+"
+    },
+    {
+      "label": "Projects Completed",
+      "value": "20+"
+    },
+    {
+      "label": "Happy Clients",
+      "value": "10+"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Aura Intelligence",
+      "category": "AI & Web3",
+      "description": "A decentralized AI platform for real-time data analysis and predictive modeling with a futuristic glassmorphic interface.",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600",
+      "tags": [
+        "Next.js",
+        "Three.js",
+        "Tailwind",
+        "Framer Motion"
+      ],
+      "link": "https://aura-ai.example.com"
+    },
+    {
+      "id": 2,
+      "title": "Zenith Commerce",
+      "category": "E-Commerce",
+      "description": "A high-end luxury fashion marketplace with seamless transitions and a minimalist aesthetic designed for conversion.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1600",
+      "tags": [
+        "Shopify",
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "link": "https://zenith.example.com"
+    },
+    {
+      "id": 3,
+      "title": "Nova Dashboard",
+      "category": "SaaS",
+      "description": "An enterprise-grade analytical dashboard providing deep insights into cloud infrastructure performance.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+      "tags": [
+        "React",
+        "D3.js",
+        "Firebase",
+        "Redux"
+      ],
+      "link": "https://nova.example.com"
+    },
+    {
+      "id": 4,
+      "title": "Modern UI Design System",
+      "category": "UI/UX Design",
+      "description": "A comprehensive design system created in Figma, focusing on accessibility, modularity, and a sleek dark aesthetic.",
+      "image": "https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=1600",
+      "tags": [
+        "Figma",
+        "UI Design",
+        "Design System",
+        "Prototyping"
+      ],
+      "link": "https://www.figma.com/community/file/example"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "AWS",
+        "GraphQL"
+      ]
+    },
+    {
+      "category": "Design",
+      "items": [
+        "Figma",
+        "Adobe CC",
+        "UI/UX",
+        "Brand Identity",
+        "Motion Design"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Freelancing",
+      "role": "Frontend Developer",
+      "period": "2023 — Present",
+      "description": "Building high-performance, visually stunning web applications for clients using React, Next.js, TypeScript, and Tailwind CSS. Focused on delivering pixel-perfect UIs and smooth user experiences."
+    }
+  ]
+}
