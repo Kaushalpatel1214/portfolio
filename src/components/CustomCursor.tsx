@@ -56,10 +56,9 @@ export default function CustomCursor() {
           y: springY,
           translateX: "-50%",
           translateY: "-50%",
-        }}
-        animate={{
           scale: isHovering ? 2.5 : 1,
           backgroundColor: isHovering ? "rgba(139, 92, 246, 0.1)" : "rgba(0, 0, 0, 0)",
+          willChange: "transform",
         }}
       />
       <motion.div

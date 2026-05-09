@@ -70,7 +70,8 @@ const STACK = [
 const Orb = memo(function Orb({ cls, delay = 0 }: { cls: string; delay?: number }) {
   return (
     <motion.div
-      className={`absolute rounded-full blur-[80px] md:blur-[140px] pointer-events-none ${cls}`}
+      className={`absolute rounded-full blur-[80px] md:blur-[100px] pointer-events-none ${cls}`}
+      style={{ willChange: "transform" }}
       animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
       transition={{ duration: 10, delay, repeat: Infinity, ease: "easeInOut" }}
     />
@@ -230,10 +231,15 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── RIGHT: Profile Card ── */}
+          {/* RIGHT: Profile/Status Card */}
           <motion.div
-            style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-            className="relative hidden lg:flex flex-col gap-4"
+            style={{ 
+              rotateX, 
+              rotateY, 
+              perspective: 1000,
+              willChange: "transform" 
+            }}
+            className="hidden lg:block relative group"
           >
             {/* Profile visual */}
             <motion.div

@@ -114,6 +114,7 @@ export default function About() {
         animate={{ rotate: 360 }}
         transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
         className="absolute -bottom-28 -right-28 w-[500px] h-[500px] border border-white/[0.04] rounded-full pointer-events-none"
+        style={{ willChange: "transform" }}
       >
         <div className="absolute inset-8 border border-white/[0.06] rounded-full" />
         <div className="absolute inset-16 border border-white/[0.09] rounded-full" />
