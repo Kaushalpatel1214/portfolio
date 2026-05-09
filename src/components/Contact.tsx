@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Send, MapPin, Phone, CheckCircle2 } from "lucide-react";
+import { Mail, Send, MapPin, CheckCircle2 } from "lucide-react";
 import data from "@/data/portfolio.json";
 import { fadeIn } from "@/lib/motion";
 
@@ -28,7 +28,7 @@ export default function Contact() {
       } else {
         alert("Something went wrong. Please try again.");
       }
-    } catch (error) {
+    } catch {
       alert("Error submitting form. Please check your connection.");
     } finally {
       setIsLoading(false);
@@ -49,11 +49,11 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight text-white">
-              LET'S BUILD <br /> SOMETHING <br />
+              LET&apos;S BUILD <br /> SOMETHING <br />
               <span className="text-primary">AWESOME</span>
             </h2>
             <p className="text-white/50 text-lg mb-12 max-w-md leading-relaxed">
-              Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to new opportunities and collaborations.
+              Have a project in mind or just want to say hi? Feel free to reach out. I&apos;m always open to new opportunities and collaborations.
             </p>
 
             <div className="space-y-8">
@@ -144,7 +144,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-3xl font-black text-white mb-4">Message Sent!</h3>
                   <p className="text-white/50 max-w-[280px]">
-                    Thank you for reaching out. I'll get back to you as soon as possible.
+                    Thank you for reaching out. I&apos;ll get back to you as soon as possible.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}

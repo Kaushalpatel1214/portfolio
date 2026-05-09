@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import data from "@/data/portfolio.json";
 
 export default function Navbar() {

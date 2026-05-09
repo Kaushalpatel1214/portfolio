@@ -1,12 +1,11 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import data from "@/data/portfolio.json";
 import { useState, useMemo } from "react";
 import Image from "next/image";
 
 export default function Projects() {
-  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
   const [activeFilter, setActiveFilter] = useState("All");
 
   // Dynamically get unique categories from data
@@ -94,8 +93,6 @@ export default function Projects() {
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  onMouseEnter={() => setHoveredIdx(index)}
-                  onMouseLeave={() => setHoveredIdx(null)}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}

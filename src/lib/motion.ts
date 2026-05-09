@@ -13,6 +13,7 @@ export const fadeIn = (direction: string, type: string, delay: number, duration:
     y: 0,
     opacity: 1,
     transition: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       type: type as any,
       delay,
       duration,
@@ -56,6 +57,7 @@ export const slideIn = (direction: string, type: string, delay: number, duration
     x: 0,
     y: 0,
     transition: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       type: type as any,
       delay,
       duration,
