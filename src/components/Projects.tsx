@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import data from "@/data/portfolio.json";
 import { useState, useMemo } from "react";
+import Image from "next/image";
 
 export default function Projects() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
@@ -157,11 +158,14 @@ export default function Projects() {
                   </div>
 
                   {/* Unique Image Hover Effect */}
-                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] pointer-events-none opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 z-50 overflow-hidden rounded-2xl hidden lg:block`}>
-                    <img
+                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] pointer-events-none opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 z-50 overflow-hidden rounded-2xl hidden lg:block shadow-2xl`}>
+                    <Image
                       src={project.image}
                       alt={project.title}
+                      width={400}
+                      height={250}
                       className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-[#050505]/40" />
                   </div>

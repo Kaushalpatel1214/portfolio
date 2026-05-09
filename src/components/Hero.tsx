@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Download, Sparkles } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiNodedotjs,
   SiTailwindcss, SiFramer, SiGraphql, SiPostgresql,
@@ -13,21 +13,24 @@ import data from "@/data/portfolio.json";
 /* ── Typewriter ───────────────────────────────────── */
 const WORDS = ["Experiences", "Interfaces", "Products", "Systems"];
 
-function useTypewriter(words: string[], speed = 90, pause = 2200) {
-  const [display, setDisplay] = useState(words[0]);
+const Typewriter = memo(function Typewriter() {
+  const [display, setDisplay] = useState(WORDS[0]);
   const [wordIdx, setWordIdx] = useState(0);
-  const [charIdx, setCharIdx] = useState(words[0].length);
+  const [charIdx, setCharIdx] = useState(WORDS[0].length);
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = words[wordIdx];
+    const current = WORDS[wordIdx];
+    const speed = 90;
+    const pause = 2200;
     const delay = deleting ? speed / 2 : charIdx === current.length ? pause : speed;
+    
     const t = setTimeout(() => {
       if (!deleting && charIdx === current.length) {
         setDeleting(true);
       } else if (deleting && charIdx === 0) {
         setDeleting(false);
-        setWordIdx((i) => (i + 1) % words.length);
+        setWordIdx((i) => (i + 1) % WORDS.length);
       } else {
         const next = charIdx + (deleting ? -1 : 1);
         setCharIdx(next);
@@ -35,10 +38,19 @@ function useTypewriter(words: string[], speed = 90, pause = 2200) {
       }
     }, delay);
     return () => clearTimeout(t);
-  }, [charIdx, deleting, wordIdx, words, speed, pause]);
+  }, [charIdx, deleting, wordIdx]);
 
-  return display;
-}
+  return (
+    <span className="inline-block min-h-[1.1em]">
+      {display}
+      <motion.span
+        animate={{ opacity: [1, 0] }}
+        transition={{ duration: 0.55, repeat: Infinity, repeatType: "reverse" }}
+        className="inline-block ml-1 w-[3px] h-[0.85em] bg-violet-400 align-middle rounded-sm"
+      />
+    </span>
+  );
+});
 
 /* ── Tech Stack Pills ─────────────────────────────── */
 const STACK = [
@@ -55,23 +67,23 @@ const STACK = [
 ];
 
 /* ── Floating Orb ─────────────────────────────────── */
-function Orb({ cls, delay = 0 }: { cls: string; delay?: number }) {
+const Orb = memo(function Orb({ cls, delay = 0 }: { cls: string; delay?: number }) {
   return (
     <motion.div
-      className={`absolute rounded-full blur-[140px] pointer-events-none ${cls}`}
-      animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.6, 0.35], x: [0, 20, 0], y: [0, -15, 0] }}
+      className={`absolute rounded-full blur-[80px] md:blur-[140px] pointer-events-none ${cls}`}
+      animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
       transition={{ duration: 10, delay, repeat: Infinity, ease: "easeInOut" }}
     />
   );
-}
+});
 
 /* ── Stat Card ────────────────────────────────────── */
-function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
+const Stat = memo(function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay, ease: [0.19, 1, 0.22, 1] }}
+      transition={{ duration: 0.6, delay, ease: [0.19, 1, 0.22, 1] }}
       className="group flex flex-col gap-0.5 p-4 rounded-2xl border border-white/[0.08] bg-white/[0.03] hover:border-violet-500/40 hover:bg-white/[0.06] transition-all duration-500 cursor-default relative overflow-hidden"
     >
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -80,11 +92,10 @@ function Stat({ value, label, delay }: { value: string; label: string; delay: nu
       <span className="text-[10px] font-bold text-white/35 uppercase tracking-widest">{label}</span>
     </motion.div>
   );
-}
+});
 
 /* ── Main ─────────────────────────────────────────── */
 export default function Hero() {
-  const word = useTypewriter(WORDS);
   const sectionRef = useRef<HTMLElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -94,6 +105,9 @@ export default function Hero() {
   const rotateY = useTransform(sx, [-300, 300], [-6, 6]);
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    if (isMobile) return;
+
     const el = sectionRef.current;
     if (!el) return;
     const fn = (e: MouseEvent) => {
@@ -101,7 +115,7 @@ export default function Hero() {
       mouseX.set(e.clientX - r.left - r.width / 2);
       mouseY.set(e.clientY - r.top - r.height / 2);
     };
-    el.addEventListener("mousemove", fn);
+    el.addEventListener("mousemove", fn, { passive: true });
     return () => el.removeEventListener("mousemove", fn);
   }, [mouseX, mouseY]);
 
@@ -170,14 +184,7 @@ export default function Hero() {
                 Digital
               </span>
               <br />
-              <span className="inline-block min-h-[1.1em]">
-                {word}
-                <motion.span
-                  animate={{ opacity: [1, 0] }}
-                  transition={{ duration: 0.55, repeat: Infinity, repeatType: "reverse" }}
-                  className="inline-block ml-1 w-[3px] h-[0.85em] bg-violet-400 align-middle rounded-sm"
-                />
-              </span>
+              <Typewriter />
             </motion.h1>
 
             {/* Bio */}

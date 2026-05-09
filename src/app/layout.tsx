@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 const outfit = Outfit({ 
   subsets: ["latin"],
   variable: "--font-outfit",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kaushal Patel | Frontend Developer & UI Engineer",
     description: "I craft high-performance, visually stunning digital experiences that merge art with technology.",
-    url: "https://kaushalpatel.design", // Replace with your actual URL
+    url: "https://kaushalpatel.design",
     siteName: "Kaushal Patel Portfolio",
     locale: "en_US",
     type: "website",
@@ -40,8 +42,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.variable} font-sans bg-[#050505] text-white antialiased`}>
-        <CustomCursor />
-        {children}
+        <LazyMotion features={domAnimation}>
+          <CustomCursor />
+          {children}
+        </LazyMotion>
       </body>
     </html>
   );

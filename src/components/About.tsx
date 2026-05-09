@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/motion";
 import { Code2, Palette, Zap, Globe, Award, ArrowUpRight } from "lucide-react";
@@ -9,7 +10,6 @@ import {
   SiFigma, SiThreedotjs, SiPrisma,
 } from "react-icons/si";
 
-/* ── Pillars data ─────────────────────────────────── */
 const PILLARS = [
   {
     Icon: Code2,
@@ -43,21 +43,21 @@ const PILLARS = [
 
 /* ── Tech rows ────────────────────────────────────── */
 const TECH = [
-  { Icon: SiReact,      label: "React",      color: "#61DAFB" },
-  { Icon: SiNextdotjs,  label: "Next.js",    color: "#ffffff" },
+  { Icon: SiReact, label: "React", color: "#61DAFB" },
+  { Icon: SiNextdotjs, label: "Next.js", color: "#ffffff" },
   { Icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
-  { Icon: SiTailwindcss,label: "Tailwind",   color: "#38BDF8" },
-  { Icon: SiFramer,     label: "Framer",     color: "#0055FF" },
-  { Icon: SiThreedotjs,  label: "Three.js",   color: "#ffffff" },
-  { Icon: SiNodedotjs,  label: "Node.js",    color: "#8CC84B" },
-  { Icon: SiGraphql,    label: "GraphQL",    color: "#E535AB" },
+  { Icon: SiTailwindcss, label: "Tailwind", color: "#38BDF8" },
+  { Icon: SiFramer, label: "Framer", color: "#0055FF" },
+  { Icon: SiThreedotjs, label: "Three.js", color: "#ffffff" },
+  { Icon: SiNodedotjs, label: "Node.js", color: "#8CC84B" },
+  { Icon: SiGraphql, label: "GraphQL", color: "#E535AB" },
   { Icon: SiPostgresql, label: "PostgreSQL", color: "#336791" },
-  { Icon: SiPrisma,     label: "Prisma",     color: "#5A67D8" },
-  { Icon: SiFigma,      label: "Figma",      color: "#F24E1E" },
+  { Icon: SiPrisma, label: "Prisma", color: "#5A67D8" },
+  { Icon: SiFigma, label: "Figma", color: "#F24E1E" },
 ];
 
 /* ── Pillar Card ─────────────────────────────────── */
-function PillarCard({
+const PillarCard = memo(function PillarCard({
   Icon, color, bg, title, desc, delay,
 }: {
   Icon: React.ElementType;
@@ -91,7 +91,7 @@ function PillarCard({
       </div>
     </motion.div>
   );
-}
+});
 
 /* ── Main ─────────────────────────────────────────── */
 export default function About() {

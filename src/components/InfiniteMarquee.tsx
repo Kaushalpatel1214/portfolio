@@ -1,5 +1,6 @@
 "use client";
 
+import { memo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiNodedotjs,
@@ -29,7 +30,7 @@ const ROW2 = [
   { label: "Branding",        Icon: SiFigma,  color: "#F24E1E" },
 ];
 
-function Row({
+const Row = memo(function Row({
   items,
   direction = "left",
   speed = 22,
@@ -38,7 +39,14 @@ function Row({
   direction?: "left" | "right";
   speed?: number;
 }) {
-  const repeated = [...items, ...items, ...items];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+  }, []);
+
+  const repeatCount = isMobile ? 2 : 4;
+  const repeated = Array(repeatCount).fill(items).flat();
   const distance = -1 * (items.length * 220); // approximate px per item
 
   return (
@@ -53,31 +61,27 @@ function Row({
             key={idx}
             className="flex items-center gap-3 group cursor-default"
           >
-            {/* icon badge */}
             <span
               className="w-9 h-9 rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center shrink-0 group-hover:border-white/25 group-hover:bg-white/[0.09] transition-all duration-400"
             >
               <Icon size={16} style={{ color }} />
             </span>
-            {/* label */}
             <span
               className="text-2xl md:text-3xl font-black tracking-tight text-white/25 group-hover:text-white/70 transition-colors duration-400"
             >
               {label}
             </span>
-            {/* separator dot */}
             <span className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-white/30 ml-2 transition-colors duration-400" />
           </div>
         ))}
       </motion.div>
     </div>
   );
-}
+});
 
 export default function InfiniteMarquee() {
   return (
     <div className="relative py-14 overflow-hidden bg-[#050505] border-y border-white/[0.05]">
-      {/* gradient masks */}
       <div className="absolute inset-y-0 left-0 w-32 z-10 pointer-events-none"
         style={{ background: "linear-gradient(to right, #050505, transparent)" }} />
       <div className="absolute inset-y-0 right-0 w-32 z-10 pointer-events-none"

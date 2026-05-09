@@ -1,12 +1,15 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Contact from "@/components/Contact";
 import InfiniteMarquee from "@/components/InfiniteMarquee";
+
+// Dynamic imports for components below the fold
+const About = dynamic(() => import("@/components/About"), { ssr: true });
+const Services = dynamic(() => import("@/components/Services"), { ssr: true });
+const Projects = dynamic(() => import("@/components/Projects"), { ssr: true });
+const Experience = dynamic(() => import("@/components/Experience"), { ssr: true });
+const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
+const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
 
 export default function Home() {
   return (
