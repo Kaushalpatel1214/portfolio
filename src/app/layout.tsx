@@ -10,13 +10,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Kaushal Patel | Frontend Developer & UI Engineer",
-  description: "Portfolio of Kaushal Patel, a Frontend Developer with 3+ years of experience specializing in high-performance React/Next.js web applications and immersive digital experiences.",
-  keywords: ["Kaushal Patel", "Frontend Developer", "UI Engineer", "React Developer", "Next.js Portfolio", "Web Design India"],
+  title: "Kaushal Patel | Next.js Developer & Performance Specialist",
+  description: "Freelance Frontend Developer with 3 years of experience. I specialize in Next.js development, Figma to React conversion, and website speed optimization. Helping businesses build fast, SEO-friendly digital products.",
+  keywords: ["Next.js Developer", "Freelance Web Developer", "Figma to React", "Website Performance Optimization", "React Developer Portfolio", "High-Performance Websites"],
   authors: [{ name: "Kaushal Patel" }],
   openGraph: {
-    title: "Kaushal Patel | Frontend Developer & UI Engineer",
-    description: "I craft high-performance, visually stunning digital experiences that merge art with technology.",
+    title: "Kaushal Patel | Next.js Developer & Performance Specialist",
+    description: "I build fast, SEO-friendly, and pixel-perfect websites that help businesses grow.",
     url: "https://kaushalpatel.design",
     siteName: "Kaushal Patel Portfolio",
     locale: "en_US",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kaushal Patel | Frontend Developer & UI Engineer",
-    description: "Frontend developer with 3+ years of experience building high-performance web experiences.",
+    title: "Kaushal Patel | Next.js Developer & Performance Specialist",
+    description: "Specializing in Next.js development and performance optimization for modern businesses.",
   },
   icons: {
     icon: "/favicon.svg",

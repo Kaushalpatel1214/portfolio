@@ -189,28 +189,27 @@ export default function Hero() {
             </motion.h1>
 
             {/* Bio */}
-            <motion.p variants={item} className="text-white/45 text-base md:text-[1.05rem] leading-relaxed max-w-[460px]">
+            <motion.p variants={item} className="text-white/45 text-base md:text-[1.05rem] leading-relaxed max-w-[500px]">
               {data.personalInfo.bio}
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={item} className="flex flex-wrap gap-4">
+            <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">
               <a
-                href="#projects"
-                className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-black text-sm font-black uppercase tracking-wider overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(139,92,246,0.55)]"
+                href="#contact"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-black text-sm font-black uppercase tracking-wider overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(139,92,246,0.45)]"
               >
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "linear-gradient(135deg,#a78bfa,#38bdf8,#fb7185)" }} />
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">View Work</span>
-                <ArrowUpRight size={15} className="relative z-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white transition-all duration-300" />
+                  style={{ background: "linear-gradient(135deg,#a78bfa,#38bdf8)" }} />
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Hire Me</span>
+                <ArrowUpRight size={16} className="relative z-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white transition-all duration-300" />
               </a>
 
               <a
-                href={data.personalInfo.resume}
-                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm text-white text-sm font-black uppercase tracking-wider hover:border-violet-500/40 hover:bg-white/10 transition-all duration-300"
+                href="#projects"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm text-white text-sm font-black uppercase tracking-wider hover:border-violet-500/40 hover:bg-white/10 transition-all duration-300"
               >
-                <Download size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
-                Resume
+                View Projects
               </a>
             </motion.div>
 

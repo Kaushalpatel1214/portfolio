@@ -9,6 +9,8 @@ const Services = dynamic(() => import("@/components/Services"), { ssr: true });
 const Projects = dynamic(() => import("@/components/Projects"), { ssr: true });
 const Experience = dynamic(() => import("@/components/Experience"), { ssr: true });
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
+const Process = dynamic(() => import("@/components/Process"), { ssr: true });
+const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: true });
 const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
 
 export default function Home() {
@@ -20,7 +22,9 @@ export default function Home() {
       <InfiniteMarquee />
       <About />
       <Services />
+      <Process />
       <Projects />
+      <Testimonials />
       <Experience />
       <Skills />
       <Contact />

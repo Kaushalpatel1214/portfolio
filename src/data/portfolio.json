@@ -6,122 +6,117 @@
     "email": "kn.patel1214@gmail.com",
     "github": "https://github.com/KaushalPatel14",
     "linkedin": "https://www.linkedin.com/in/kaushal-patel-376958398/",
-    "twitter": "https://twitter.com/alexrivira",
-    "bio": "Frontend developer with 3+ years of experience building high-performance, visually stunning web experiences. I specialize in React, Next.js, and modern UI engineering — turning ideas into fast, beautiful, production-ready interfaces.",
-    "resume": "/resume.pdf"
+    "bio": "I am a frontend developer with 3 years of experience creating modern, responsive, and performance-focused websites. I specialize in building fast-loading user interfaces using React, Next.js, and Tailwind CSS, converting Figma designs into pixel-perfect websites, and significantly improving website performance and user experience for clients worldwide.",
+    "cta": {
+      "primary": "Hire Me",
+      "secondary": "View Projects",
+      "special": "Let's Work Together"
+    }
   },
   "stats": [
+    { "label": "Years Experience", "value": "3+" },
+    { "label": "Lighthouse Score", "value": "95+" },
+    { "label": "Figma to Code", "value": "100%" },
+    { "label": "Faster Load", "value": "40%" }
+  ],
+  "services": [
     {
-      "label": "Years Experience",
-      "value": "3+"
+      "title": "Next.js Development",
+      "description": "I build fast, SEO-friendly modern websites that rank higher and load instantly using the power of Next.js 15+.",
+      "benefits": ["Server-Side Rendering", "SEO Optimized", "Edge Delivery"]
     },
     {
-      "label": "Projects Completed",
-      "value": "20+"
+      "title": "Figma to React",
+      "description": "I convert complex UI designs into responsive, pixel-perfect websites with zero compromises on design integrity.",
+      "benefits": ["Design Accuracy", "Responsive Layouts", "Clean Code"]
     },
     {
-      "label": "Happy Clients",
-      "value": "10+"
+      "title": "Website Optimization",
+      "description": "I specialize in improving loading speeds, responsiveness, and Core Web Vitals to boost your conversion rates.",
+      "benefits": ["90+ Lighthouse Score", "Reduced TBT", "Optimized Assets"]
+    },
+    {
+      "title": "WordPress to Next.js",
+      "description": "Modernize your outdated WordPress site with a high-performance Next.js frontend while keeping your content.",
+      "benefits": ["Headless CMS", "Better Security", "Superior Speed"]
+    },
+    {
+      "title": "Landing Page Development",
+      "description": "I create high-converting landing pages for startups that turn visitors into loyal customers through better UX.",
+      "benefits": ["Conversion Focused", "A/B Ready", "Mobile First"]
     }
+  ],
+  "process": [
+    { "step": "01", "title": "Requirement Discussion", "description": "We dive deep into your business goals, target audience, and specific project requirements." },
+    { "step": "02", "title": "UI Planning", "description": "Reviewing Figma designs or creating high-fidelity wireframes to ensure design-to-code alignment." },
+    { "step": "03", "title": "Development", "description": "Writing clean, modular, and accessible code using React, Next.js, and modern styling tools." },
+    { "step": "04", "title": "Optimization", "description": "Rigorous testing for speed, SEO, and responsiveness across all devices and browsers." },
+    { "step": "05", "title": "Deployment", "description": "Launching your project on high-performance infrastructure like Vercel or Netlify." }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Aura Intelligence",
-      "category": "AI & Web3",
-      "description": "A decentralized AI platform for real-time data analysis and predictive modeling with a futuristic glassmorphic interface.",
-      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600",
-      "tags": [
-        "Next.js",
-        "Three.js",
-        "Tailwind",
-        "Framer Motion"
-      ],
-      "link": "https://aura-ai.example.com"
+      "title": "Zoey Kamran",
+      "category": "Personal Portfolio",
+      "description": "A vibrant and engaging portfolio for a young author, showcasing writing, milestones, and creative projects.",
+      "problem": "The client needed a platform that felt playful yet professional to house her growing body of work and achievements.",
+      "solution": "Implemented a Next.js frontend with Sanity CMS for easy content updates and Tailwind CSS for a colorful, responsive design.",
+      "result": "Successfully launched a modern digital presence that effectively showcases her book and creative milestones.",
+      "image": "/projects/zoey-kamran.png",
+      "tags": ["Next.js", "Sanity CMS", "Tailwind CSS"],
+      "links": {
+        "live": "https://www.zoeykamran.com/",
+        "github": "#",
+        "caseStudy": "#"
+      }
     },
     {
       "id": 2,
-      "title": "Zenith Commerce",
-      "category": "E-Commerce",
-      "description": "A high-end luxury fashion marketplace with seamless transitions and a minimalist aesthetic designed for conversion.",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1600",
-      "tags": [
-        "Shopify",
-        "React",
-        "Node.js",
-        "PostgreSQL"
-      ],
-      "link": "https://zenith.example.com"
-    },
-    {
-      "id": 3,
-      "title": "Nova Dashboard",
-      "category": "SaaS",
-      "description": "An enterprise-grade analytical dashboard providing deep insights into cloud infrastructure performance.",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-      "tags": [
-        "React",
-        "D3.js",
-        "Firebase",
-        "Redux"
-      ],
-      "link": "https://nova.example.com"
-    },
-    {
-      "id": 4,
-      "title": "Modern UI Design System",
-      "category": "UI/UX Design",
-      "description": "A comprehensive design system created in Figma, focusing on accessibility, modularity, and a sleek dark aesthetic.",
-      "image": "https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=1600",
-      "tags": [
-        "Figma",
-        "UI Design",
-        "Design System",
-        "Prototyping"
-      ],
-      "link": "https://www.figma.com/community/file/example"
+      "title": "Vision Deck",
+      "category": "Business Agency",
+      "description": "A premium corporate website for a business agency specializing in hospitality and entertainment sectors.",
+      "problem": "The agency required a high-end digital identity that reflects their expertise in premium project management and hospitality.",
+      "solution": "Built a sleek, high-performance website with smooth scroll animations and an interactive service showcase.",
+      "result": "Established a strong professional digital presence that aligns with their premium brand positioning.",
+      "image": "/projects/vision-deck.png",
+      "tags": ["Static Site", "Professional UI", "Animations"],
+      "links": {
+        "live": "https://www.visiondeck.co.in/",
+        "github": "#",
+        "caseStudy": "#"
+      }
     }
   ],
-  "skills": [
-    {
-      "category": "Frontend",
-      "items": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Three.js"
-      ]
-    },
-    {
-      "category": "Backend",
-      "items": [
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "AWS",
-        "GraphQL"
-      ]
-    },
-    {
-      "category": "Design",
-      "items": [
-        "Figma",
-        "Adobe CC",
-        "UI/UX",
-        "Brand Identity",
-        "Motion Design"
-      ]
-    }
-  ],
+  "skills": {
+    "Frontend": ["React", "Next.js", "JavaScript", "TypeScript"],
+    "Styling": ["Tailwind CSS", "SCSS", "CSS", "Framer Motion"],
+    "CMS": ["WordPress", "Sanity", "Contentful"],
+    "Tools": ["Git", "GitHub", "Figma", "Vercel"]
+  },
   "experience": [
     {
-      "company": "Freelancing",
-      "role": "Frontend Developer",
+      "company": "Freelance",
+      "role": "Next.js Developer",
       "period": "2023 — Present",
-      "description": "Building high-performance, visually stunning web applications for clients using React, Next.js, TypeScript, and Tailwind CSS. Focused on delivering pixel-perfect UIs and smooth user experiences."
+      "description": "Collaborated with startups and businesses to build high-performance, SEO-optimized web products. Specialized in converting Figma designs to pixel-perfect React code and optimizing Core Web Vitals for production applications."
+    },
+    {
+      "company": "Frontend Studio",
+      "role": "Frontend Developer",
+      "period": "2021 — 2023",
+      "description": "Developed responsive user interfaces and modular component libraries. Focused on improving code quality and implementing smooth, meaningful animations using Framer Motion."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Startup Founder",
+      "content": "Kaushal delivered a clean and responsive website with excellent performance. Our load times dropped significantly!"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Product Manager",
+      "content": "Professional workflow and pixel-perfect implementation of our Figma designs. Highly recommended for Next.js work."
     }
   ]
 }

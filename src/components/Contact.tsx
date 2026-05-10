@@ -126,7 +126,7 @@ export default function Contact() {
                   <button
                     disabled={isLoading}
                     type="submit"
-                    className="w-full py-5 bg-primary text-white rounded-2xl font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-primary/80 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-5 bg-primary text-white rounded-2xl font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-primary/80 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
                     {isLoading ? "Sending..." : "Send Message"}
                     <Send size={18} />
